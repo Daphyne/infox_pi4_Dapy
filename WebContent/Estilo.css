@@ -1,0 +1,216 @@
+@CHARSET "ISO-8859-1";
+
+body{
+  background-color: #FFFFFF;
+  margin:0px;
+  font-family: "cooper black", "algerian", "forte","arial black";
+}
+h1{
+  background-color: #1E90FF; 
+  text-align: center;
+  padding: 10px;
+  color:#000000;
+}
+ 
+footer{
+  background-color: #9AFF9A; 
+  height:100px;
+  margin-bottom: 30px;
+  color:#000000;
+}
+#tudo{
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+header{
+  background-color:#9AFF9A; 
+  height:139px;
+  color:#fff;
+}
+nav{
+  background-color:  #9AFF9A;
+  height: 60px;
+  line-height:60px;
+  display: block;
+  color:#fff;
+ }
+ nav ul{
+  margin: 0 auto;
+  padding: 0px;
+  width: 700px;
+}
+nav ul li{
+  list-style: none;
+  float:left;
+}
+nav ul li a{
+  color: #000000;
+  text-transform:uppercase;
+  text-decoration: none;
+  display: block;
+  padding:0 70px;
+  font-weight: bold;
+  transition: background-color 1s;
+}
+#conteudo{
+  background-color: #FFFFFF; 
+  margin:0px;
+}
+#conteudo figure{
+  margin:0 0 10px 0;
+}
+body {
+  text-align: center;
+}
+
+#galeria {
+  width: 800px;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #FF66CC;
+}
+
+
+#ampliacao {
+  width: 800px;
+  height: 800px;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+h2{
+ 
+  text-decoration: underline;
+  text-align: center;
+  color: MediumVioletRed;
+}
+h3{
+  
+  text-decoration: underline;
+}
+section h3:nth-child(4){
+  color: MediumVioletRed;
+  text-align: center;
+  
+  
+}
+section h3:nth-child(6){
+  color: MediumVioletRed;
+  text-align: center;
+  
+  
+}
+#pespecial{
+
+  text-align: left;
+}
+aside{
+  width:50px;
+  height:50px;
+  float-left:left;
+  margin-left: 10px;
+  
+  
+}
+aside img.profile{
+  
+  width:  300px;
+  height: 500px;
+  float: left;
+  margin: 0 20px 10px 0;
+  
+  
+}
+aside figure figcaption{
+  
+ font-size: 10px;
+  text-align: center;
+  
+ }nav ul li a:hover, a.active{
+  background-color: #3CB371;
+  color: #000;
+}figure span{
+  background-color:#FF66CC;
+  padding:30px;
+  position: absolute;
+  display: inline;
+  float:left;
+  width: 50px;
+  height: 50px;
+
+}
+figure:hover span{
+  display:block;
+}
+figure{
+  width: 960px;
+}
+figure img{
+  float: center;
+  width: 315px;
+  height: 500px;
+
+}
+#produtos figure{
+
+  width:  960px;
+}
+#produtos figure img{
+
+ float: center;
+  width: 315px;
+  height: 500px;
+ 
+
+}
+#produtos hr{
+ border-bottom: 3px solid #000;
+
+}
+#conteudo form input{
+
+  width: 280px;
+
+}
+#conteudo form input#ddd{
+
+  width: 40px;
+  
+}
+#conteudo form input#telefone{
+
+  width: 220px;
+  
+}
+#conteudo form input#enviar{
+
+  width: auto;
+  
+}
+#conteudo form textarea#mensagem{
+
+  width: 400px;
+  height: 160px;
+  
+}
+#grande{
+
+  float: center;
+  width: 400px;
+  height: 700px;
+}
+#ampliacao img {
+  width: 90%;
+  height: auto;
+}
+
+#galeria nav {
+  margin-top: 1em;
+}
+
+#galeria nav img {
+  text-align: center;
+  width: 80px;
+  height: auto;
+}
+

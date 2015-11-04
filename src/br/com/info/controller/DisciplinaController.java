@@ -2,7 +2,10 @@ package br.com.info.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Scanner;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,6 +35,24 @@ public class DisciplinaController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		
+		DisciplinaDAO disdao = new DisciplinaDAO();
+		
+
+		int iddisciplina = Integer.parseInt(request.getParameter("txtiddisci"));
+		
+		List<Disciplina> lista =disdao.BuscarIdDisciplina(iddisciplina);
+
+		request.setAttribute("lista", lista);
+		
+		RequestDispatcher saida = request.getRequestDispatcher("ListaDisciplina.jsp");
+		saida.forward(request, response);
+		
+		
+
+		
+		
 	}
 
 	/**

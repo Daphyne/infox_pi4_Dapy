@@ -2,7 +2,10 @@ package br.com.info.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Scanner;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,6 +35,37 @@ public class ProfessorController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		
+		ProfessorDAO profdao= new ProfessorDAO();
+
+		int matriculaProfessor = Integer.parseInt(request.getParameter("txtmprof"));
+		
+		List<Professor> lista = profdao.BuscarMatricula(matriculaProfessor);
+		
+		request.setAttribute("lista", lista);
+		
+		RequestDispatcher saida = request.getRequestDispatcher("ListaProfessor.jsp");
+		saida.forward(request, response);
+		
+		
+		//Com servlets
+		//String htmlsaida = "<html> <body> <table border='1'>"+
+		//"<tr><td>Matricula do professor</td><td>Data de nascimneto</td><td>Telefone</td><td>Nome</td><td>Senha</td><td>Email</td></tr>";
+		
+		//for(Professor p :lista){
+			
+			//htmlsaida +="<tr><td>"+p.getMatriculaProfessor()+"</td><td>"+p.getDataNascProfessor()+"</td><td>"+p.getTelefoneProfessor()+"</td><td>"+p.getNomeProfessor()+"</td><td>"+p.getSenha()+"</td><td>"+p.getEmailProfessor()+"</td></tr>";
+			
+			
+		//}
+		
+		//htmlsaida+="</table></body></html>";
+		
+		//PrintWriter saida = response.getWriter();
+		//saida.println(htmlsaida);
+		
+		  
 		
 	}
 

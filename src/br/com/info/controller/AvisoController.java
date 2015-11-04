@@ -2,7 +2,10 @@ package br.com.info.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Scanner;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,6 +36,23 @@ public class AvisoController extends HttpServlet implements Servlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		
+		AvisoDAO avidao = new AvisoDAO();
+		
+
+
+		int idaviso = Integer.parseInt(request.getParameter("txtmidav"));
+		List<Aviso> lista = avidao.BuscarIdAviso(idaviso);
+		
+		request.setAttribute("lista", lista);
+		
+		RequestDispatcher saida = request.getRequestDispatcher("ListaAviso.jsp");
+		saida.forward(request, response);
+		
+		
+		
+
 	}
 
 	/**

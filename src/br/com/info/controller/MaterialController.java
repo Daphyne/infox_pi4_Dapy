@@ -2,7 +2,10 @@ package br.com.info.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Scanner;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,6 +35,24 @@ public class MaterialController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		
+		MaterialDAO matdao = new MaterialDAO();
+		
+
+		int idmaterial = Integer.parseInt(request.getParameter("txtmidmater"));
+		
+		List<Material> lista = matdao.BuscarIdMaterial(idmaterial);
+		
+		request.setAttribute("lista", lista);
+		
+		RequestDispatcher saida = request.getRequestDispatcher("ListaMaterial.jsp");
+		saida.forward(request, response);
+		
+		
+		
+		
+		
 	}
 
 	/**

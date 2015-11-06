@@ -36,19 +36,56 @@ public class CursarController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+
+		int macursar = Integer.parseInt(request.getParameter("txtmalucursar"));
+
+		String acao = request.getParameter("acao");
 		
 		CursarDAO curdao = new CursarDAO();
 		
 
-		int macursar = Integer.parseInt(request.getParameter("txtmalucursar"));
+		if(acao!=null && acao.equals("exc")){
+			
+
+			String matriculaAluno = request.getParameter("matriculaAluno");
+			
+			Cursar cursar = new Cursar();
+			
+			cursar.setMatriculaAluno(Integer.parseInt(matriculaAluno));
+			
+			curdao.Excluir(cursar);
+			
+			
+		}
 		
-		List<Cursar> lista = curdao.BuscarMatriculaAluno(macursar);
+		if(acao!=null && acao.equals("alt")){
+			
+
+			String matriculaAluno = request.getParameter("matriculaAluno");
+			
+			Cursar cursar = (Cursar) curdao.BuscarMatriculaAluno(Integer.parseInt(matriculaAluno));
+			
+
+			request.setAttribute("cursar", cursar);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroCursar.jsp");
+			saida.forward(request, response);
+			
+			
+		}
+			
 		
-		request.setAttribute("lista", lista);
-		
-		RequestDispatcher saida = request.getRequestDispatcher("ListaCursar.jsp");
-		saida.forward(request, response);
-		
+
+		if(acao!=null){
+			List<Cursar> lista = curdao.BuscarMatriculaAluno(macursar);
+			
+			request.setAttribute("lista", lista);
+			
+			RequestDispatcher saida = request.getRequestDispatcher("ListaCursar.jsp");
+			saida.forward(request, response);
+			
+		}
 
 		
 	}

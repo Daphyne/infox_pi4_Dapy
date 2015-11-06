@@ -13,7 +13,7 @@
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
-		<th> Matrícula do aluno</th><th>Id da disciplina</th><th>Nota</th><th>Falta</th>
+		<th> Matrícula do aluno</th><th>Id da disciplina</th><th>Nota</th><th>Falta</th><th>Acao</th>
 		</tr>
 <%
 
@@ -29,6 +29,14 @@ for(Cursar c : listacur){
 		<td><%= c.getIdDisciplina() %></td>
 		<td><%=  c.getNota()%></td>
 		<td><%=  c.getFalta()%></td>
+		<td>
+		
+		<a href="cursarcontroller.do?acao=exc&matriculaAluno=<%=c.getMatriculaAluno()%>"> Excluir </a>
+		
+		<a href="cursarcontroller.do?acao=alt&matriculaAluno=<%=c.getMatriculaAluno()%>"> Alterar </a>
+		
+		</td>
+		
 		
 	</tr>
 

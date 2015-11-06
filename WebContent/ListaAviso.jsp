@@ -13,7 +13,7 @@
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
-		<th> Nome </th><th>Id do aviso</th><th>Hora da publicação</th><th>Id da disciplina</th><th>Mensagem do aviso</th>
+		<th> Nome </th><th>Id do aviso</th><th>Hora da publicação</th><th>Id da disciplina</th><th>Mensagem do aviso</th><th>Acao</th>
 		</tr>
 <%
 
@@ -30,6 +30,14 @@ for(Aviso a : listav){
 		<td><%= a.getHoraPublicacao() %></td>
 		<td><%= a.getIdDisciplina()%></td>
 		<td><%= a.getMensagemaviso()%></td>
+		<td>
+		
+		<a href="materialcontroller.do?acao=exc&idAviso=<%= a.getIdAviso()%>"> Excluir </a>
+		
+		<a href="materialcontroller.do?acao=alt&idAviso=<%= a.getIdAviso()%>"> Alterar </a>
+		
+		</td>
+		
 		
 	</tr>
 

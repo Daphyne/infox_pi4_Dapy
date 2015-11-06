@@ -13,7 +13,7 @@
 	<table border="1">
 		
 		<tr bgcolor="#1E90FF">
-		<th> Matrícula</th><th>Data de nascimento</th><th>Telefone</th><th>Nome</th><th>Senha</th><th>E-mail</th>
+		<th> Matrícula</th><th>Data de nascimento</th><th>Telefone</th><th>Nome</th><th>Senha</th><th>E-mail</th><th>Acao</th>
 		</tr>
 <%
 
@@ -31,6 +31,10 @@ for(Professor p : listaprof){
 		<td><%= p.getNomeProfessor() %></td>
 		<td><%= p.getSenha() %></td>
 		<td><%= p.getEmailProfessor() %></td>
+		<td>
+		<a href="professorcontroller.do?acao=exc&matriculaProfessor=<%= p.getMatriculaProfessor() %>"> Excluir </a>
+		<a href="professorcontroller.do?acao=alt&matriculaProfessor=<%= p.getMatriculaProfessor() %>"> Alterar </a>
+		</td>
 	</tr>
 
 

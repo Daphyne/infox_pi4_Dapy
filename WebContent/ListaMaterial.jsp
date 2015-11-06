@@ -13,7 +13,7 @@
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
-		<th> Caminho</th><th>Nome</th><th>Id do material</th><th>Id da disciplina</th>
+		<th> Caminho</th><th>Nome</th><th>Id do material</th><th>Id da disciplina</th><th>Acao</th>
 		</tr>
 <%
 
@@ -29,6 +29,14 @@ for(Material m : listamat){
 		<td><%= m.getNomeMaterial() %></td>
 		<td><%=  m.getIdMaterial()%></td>
 		<td><%=  m.getIdDisciplina()%></td>
+		<td>
+		
+		<a href="materialcontroller.do?acao=exc&idMaterial=<%= m.getIdMaterial()%>"> Excluir </a>
+		<a href="materialcontroller.do?acao=alt&idMaterial=<%= m.getIdMaterial()%>"> Alterar </a>
+		
+		
+		</td>
+		
 		
 	</tr>
 

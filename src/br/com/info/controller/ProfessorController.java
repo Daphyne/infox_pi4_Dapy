@@ -3,7 +3,6 @@ package br.com.info.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,18 +35,55 @@ public class ProfessorController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+
+		
+		int matriculaProfessor = Integer.parseInt(request.getParameter("txtmprof"));
+
+
+		String acao = request.getParameter("acao");
 		
 		ProfessorDAO profdao= new ProfessorDAO();
+		
 
-		int matriculaProfessor = Integer.parseInt(request.getParameter("txtmprof"));
 		
-		List<Professor> lista = profdao.BuscarMatricula(matriculaProfessor);
+		if(acao!=null && acao.equals("exc")){
+			
+
+			String matriculaprofessor = request.getParameter("matriculaProfessor");
+			
+			Professor prof = new Professor();
+			prof.setMatriculaProfessor(Integer.parseInt(matriculaprofessor));
+			profdao.Excluir(prof);
+				
+		}
 		
-		request.setAttribute("lista", lista);
 		
-		RequestDispatcher saida = request.getRequestDispatcher("ListaProfessor.jsp");
-		saida.forward(request, response);
+		if(acao!=null && acao.equals("alt")){
+			
+
+			String matriculaprofessor = request.getParameter("matriculaProfessor");
+			Professor prof = (Professor) profdao.BuscarMatricula(Integer.parseInt(matriculaprofessor));
+			request.setAttribute("professor", prof);
+			
+			//Encaminha para a tela
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroProfessor.jsp");
+			saida.forward(request, response);
+			
+			
+		}
 		
+
+		
+
+		if(acao!=null){
+				
+			List<Professor> lista = profdao.BuscarMatricula(matriculaProfessor);
+			request.setAttribute("lista", lista); 
+			
+			RequestDispatcher saida = request.getRequestDispatcher("ListaProfessor.jsp");
+			saida.forward(request, response);
+			
+		}
 		
 		//Com servlets
 		//String htmlsaida = "<html> <body> <table border='1'>"+

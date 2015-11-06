@@ -37,18 +37,57 @@ public class AlunoController extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 
-		
-		AlunoDAO alunodao = new AlunoDAO();
+
+		int mal = Integer.parseInt(request.getParameter("txtmalu"));
+
+		String acao = request.getParameter("acao");
+
+		AlunoDAO alunodao = new AlunoDAO();	
 		
 
-		int iddisciplina = Integer.parseInt(request.getParameter("txtmalu"));
+		if(acao!=null && acao.equals("exc")){
+			
+			
+			String matriculaAluno = request.getParameter("matriculaAluno");
+			
+			Aluno aluno = new Aluno();
+			
+			aluno.setMatriculaAluno(Integer.parseInt(matriculaAluno));
+			
+			alunodao.Excluir(aluno);
+			
+		}
 		
-		List<Aluno> lista = alunodao.BuscarMatriculaAluno(iddisciplina);
-		
-		request.setAttribute("lista", lista);
-		
-		RequestDispatcher saida = request.getRequestDispatcher("ListaAluno.jsp");
-		saida.forward(request, response);
+		if(acao!=null && acao.equals("alt")){
+			
+			
+			String matriculaAluno = request.getParameter("matriculaAluno");
+			
+			Aluno aluno = (Aluno) alunodao.BuscarMatriculaAluno(Integer.parseInt(matriculaAluno));
+			
+
+			request.setAttribute("aluno", aluno);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroAluno.jsp");
+			saida.forward(request, response);
+			
+			
+		}
+
+
+		if(acao!=null){
+			
+			
+			List<Aluno> lista = alunodao.BuscarMatriculaAluno(mal);
+			
+			request.setAttribute("lista", lista);
+			
+			RequestDispatcher saida = request.getRequestDispatcher("ListaAluno.jsp");
+			saida.forward(request, response);
+			
+			
+		}
 		
 		
 		

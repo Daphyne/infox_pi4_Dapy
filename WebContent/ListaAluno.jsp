@@ -13,7 +13,7 @@
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
-		<th> Matrícula do aluno</th><th>Telefone</th><th>E-mail</th><th>Data de nascimento</th><th>Nome</th><th>Endereco</th><th>Senha</th>
+		<th> Matrícula do aluno</th><th>Telefone</th><th>E-mail</th><th>Data de nascimento</th><th>Nome</th><th>Endereco</th><th>Senha</th><th>Acao</th>
 		</tr>
 <%
 
@@ -32,6 +32,14 @@ for(Aluno a : listaalu){
 		<td><%= a.getNomeAluno()%></td>
 		<td><%= a.getEndereco() %></td>
 		<td><%= a.getSenha()%></td>
+		<td>
+		
+		<a href="alunocontroller.do?acao=exc&matriculaAluno=<%= a.getMatriculaAluno()%>"> Excluir </a>
+		
+		<a href="alunocontroller.do?acao=alt&matriculaAluno=<%= a.getMatriculaAluno()%>"> Alterar </a>
+		
+		</td>
+		
 
 	</tr>
 

@@ -3,7 +3,6 @@ package br.com.info.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,19 +35,60 @@ public class MaterialController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+
+
+		int idmaterial = Integer.parseInt(request.getParameter("txtmidmater"));
+		
+
+		String acao = request.getParameter("acao");
 		
 		MaterialDAO matdao = new MaterialDAO();
 		
 
-		int idmaterial = Integer.parseInt(request.getParameter("txtmidmater"));
+
+		if(acao!=null && acao.equals("exc")){
+
+
+			String idMaterial = request.getParameter("idMaterial");
+			
+			Material mater = new Material();
+			
+			mater.setIdMaterial(Integer.parseInt(idMaterial));
+			
+			matdao.Excluir(mater);
+			
+
+			
+		}
 		
-		List<Material> lista = matdao.BuscarIdMaterial(idmaterial);
+		if(acao!=null && acao.equals("alt")){
+
+
+			String idMaterial = request.getParameter("idMaterial");
+			
+			Material mater = (Material) matdao.BuscarIdMaterial(Integer.parseInt(idMaterial));
+			
+			request.setAttribute("material", mater);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroMaterial.jsp");
+			saida.forward(request, response);
+
+			
+
+			
+		}
 		
-		request.setAttribute("lista", lista);
-		
-		RequestDispatcher saida = request.getRequestDispatcher("ListaMaterial.jsp");
-		saida.forward(request, response);
-		
+
+		if(acao!=null){
+			List<Material> lista = matdao.BuscarIdMaterial(idmaterial);
+			
+			request.setAttribute("lista", lista);
+			
+			RequestDispatcher saida = request.getRequestDispatcher("ListaMaterial.jsp");
+			saida.forward(request, response);
+			
+		}
 		
 		
 		

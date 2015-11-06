@@ -3,7 +3,6 @@ package br.com.info.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -37,18 +36,54 @@ public class DisciplinaController extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		
-		DisciplinaDAO disdao = new DisciplinaDAO();
 		
 
 		int iddisciplina = Integer.parseInt(request.getParameter("txtiddisci"));
 		
-		List<Disciplina> lista =disdao.BuscarIdDisciplina(iddisciplina);
 
-		request.setAttribute("lista", lista);
+		String acao = request.getParameter("acao");
 		
-		RequestDispatcher saida = request.getRequestDispatcher("ListaDisciplina.jsp");
-		saida.forward(request, response);
+		DisciplinaDAO disdao = new DisciplinaDAO();
 		
+
+		if(acao!=null && acao.equals("exc")){
+			
+			String idDisciplina = request.getParameter("idDisciplina");
+			
+			Disciplina dis = new Disciplina();
+			
+			dis.setIdDisciplina(Integer.parseInt(idDisciplina));
+			
+			disdao.Excluir(dis);
+			
+		}
+		
+
+		if(acao!=null && acao.equals("alt")){
+			
+			String idDisciplina = request.getParameter("idDisciplina");
+			
+			Disciplina dis = (Disciplina) disdao.BuscarIdDisciplina(Integer.parseInt(idDisciplina));
+			
+			request.setAttribute("disciplina", dis);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroDisciplina.jsp");
+			saida.forward(request, response);
+			
+		}
+		
+		
+
+		if(acao!=null){
+			
+				List<Disciplina> lista =disdao.BuscarIdDisciplina(iddisciplina);
+				request.setAttribute("lista", lista);
+				
+				RequestDispatcher saida = request.getRequestDispatcher("ListaDisciplina.jsp");
+				saida.forward(request, response);
+				
+			}
 		
 
 		

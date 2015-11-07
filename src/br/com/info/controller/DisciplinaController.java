@@ -73,6 +73,24 @@ public class DisciplinaController extends HttpServlet {
 			
 		}
 		
+		if(acao!=null && acao.equals("cad")){
+			
+			
+			Disciplina dis = new Disciplina();
+			dis.setIdDisciplina(0);
+			dis.setNomeDisciplina("");
+			dis.setMatriculaProfessor(0);
+			dis.setTelefoneProfessor("");
+			dis.setEmailProfessor("");
+			
+			request.setAttribute("disciplina", dis);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroDisciplina.jsp");
+			saida.forward(request, response);
+			
+		}
+		
 		
 
 		if(acao!=null){

@@ -83,6 +83,29 @@ public class AvisoController extends HttpServlet implements Servlet {
 		}
 		
 
+		if(acao!=null && acao.equals("cad")){
+			
+
+			
+			Aviso av = new Aviso();
+			av.setNomeAviso("");
+			av.setIdAviso(0);
+			av.setHoraPublicacao("");
+			av.setIdDisciplina(0);
+			av.setMensagemaviso("");
+			
+			
+			request.setAttribute("aviso", av);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroAviso.jsp");
+			saida.forward(request, response);
+
+			
+			
+			
+		}
+
 		if(acao!=null){
 			
 			List<Aviso> lista = avidao.BuscarIdAviso(idaviso);

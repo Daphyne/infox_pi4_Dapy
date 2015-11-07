@@ -72,7 +72,26 @@ public class ProfessorController extends HttpServlet {
 			
 		}
 		
-
+		if(acao!=null && acao.equals("cad")){
+			
+			//Cria novo objeto professor
+			Professor prof = new Professor();
+			prof.setMatriculaProfessor(0);
+			prof.setDataNascProfessor("");
+			prof.setTelefoneProfessor("");
+			prof.setNomeProfessor("");
+			prof.setSenha("");
+			prof.setEmailProfessor("");
+			
+			
+			request.setAttribute("professor", prof);
+			
+			//Encaminha para a tela
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroProfessor.jsp");
+			saida.forward(request, response);
+			
+			
+		}
 		
 
 		if(acao!=null){

@@ -75,7 +75,25 @@ public class CursarController extends HttpServlet {
 			
 		}
 			
-		
+		if(acao!=null && acao.equals("cad")){
+			
+
+			
+			Cursar cursar = new Cursar();
+			cursar.setFalta("");
+			cursar.setNota("");
+			cursar.setMatriculaAluno(0);
+			cursar.setIdDisciplina(0);
+			
+
+			request.setAttribute("cursar", cursar);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroCursar.jsp");
+			saida.forward(request, response);
+			
+			
+		}
 
 		if(acao!=null){
 			List<Cursar> lista = curdao.BuscarMatriculaAluno(macursar);

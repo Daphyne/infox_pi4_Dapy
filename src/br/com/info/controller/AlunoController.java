@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.infox.entidades.Aluno;
+import br.com.infox.entidades.Disciplina;
 import br.com.infox.jdbc.AlunoDAO;
 
 /**
@@ -65,6 +66,29 @@ public class AlunoController extends HttpServlet {
 			
 			Aluno aluno = (Aluno) alunodao.BuscarMatriculaAluno(Integer.parseInt(matriculaAluno));
 			
+
+			request.setAttribute("aluno", aluno);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroAluno.jsp");
+			saida.forward(request, response);
+			
+			
+		}
+
+		
+		if(acao!=null && acao.equals("cad")){
+			
+			
+			
+			Aluno aluno = new Aluno();
+			aluno.setMatriculaAluno(0);
+			aluno.setTelefoneAluno("");
+			aluno.setEmailAluno("");
+			aluno.setDataNacAluno("");
+			aluno.setNomeAluno("");
+			aluno.setEndereco("");
+			aluno.setSenha("");
 
 			request.setAttribute("aluno", aluno);
 			

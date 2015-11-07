@@ -79,6 +79,26 @@ public class MaterialController extends HttpServlet {
 			
 		}
 		
+		if(acao!=null && acao.equals("cad")){
+
+
+			
+			Material mater = new Material();
+			mater.setCaminho("");
+			mater.setNomeMaterial("");
+			mater.setIdMaterial(0);
+			mater.setIdDisciplina(0);
+			
+			request.setAttribute("material", mater);
+			
+
+			RequestDispatcher saida = request.getRequestDispatcher("FormularioCadastroMaterial.jsp");
+			saida.forward(request, response);
+
+			
+
+			
+		}
 
 		if(acao!=null){
 			List<Material> lista = matdao.BuscarIdMaterial(idmaterial);

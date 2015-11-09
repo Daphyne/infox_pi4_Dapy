@@ -3,6 +3,10 @@ package br.com.info.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+<<<<<<< HEAD
+=======
+import java.util.Scanner;
+>>>>>>> 565db68d4a023d876fa8b2ae23bc41d6388d5738
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.infox.entidades.Aluno;
+<<<<<<< HEAD
+=======
+import br.com.infox.entidades.Disciplina;
+>>>>>>> 565db68d4a023d876fa8b2ae23bc41d6388d5738
 import br.com.infox.jdbc.AlunoDAO;
 
 /**

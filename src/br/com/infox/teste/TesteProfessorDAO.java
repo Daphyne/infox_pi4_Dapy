@@ -1,5 +1,9 @@
 package br.com.infox.teste;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 import java.util.Scanner;
 
 import br.com.infox.entidades.Professor;
@@ -9,15 +13,28 @@ public class TesteProfessorDAO {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 
 		cadastro();
 		alterar();
 		excluir();
 		buscar();
+=======
+		
+		
+		cadastro();
+		//alterar();
+		//excluir();
+		//buscar();
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 		
 		
 
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 	private static void cadastro() {
 		Professor prof = new Professor();
 		ProfessorDAO profdao = new ProfessorDAO(); 

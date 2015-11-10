@@ -10,7 +10,10 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
@@ -18,9 +21,15 @@
 		</tr>
 <%
 
+<<<<<<< HEAD
 	List<Cursar> listacur = (List<Cursar>)request.getAttribute("lista");
 
 	for(Cursar c : listacur){
+=======
+List<Cursar> listacur = (List<Cursar>)request.getAttribute("lista");
+
+for(Cursar c : listacur){
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 
 %>
 
@@ -50,5 +59,9 @@
 
 
 	</table>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

@@ -10,8 +10,11 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
@@ -19,9 +22,15 @@
 		</tr>
 <%
 
+<<<<<<< HEAD
 	List<Disciplina> listadisci = (List<Disciplina>)request.getAttribute("lista");
 
 	for(Disciplina d : listadisci){
+=======
+List<Disciplina> listadisci = (List<Disciplina>)request.getAttribute("lista");
+
+for(Disciplina d : listadisci){
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 
 %>
 
@@ -52,5 +61,9 @@
 
 
 	</table>
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

@@ -6,11 +6,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<<<<<<< HEAD
 <title>Lista material</title>
 </head>
 <body>
 
 
+=======
+<title>Lista de material</title>
+</head>
+<body>
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
@@ -18,9 +25,15 @@
 		</tr>
 <%
 
+<<<<<<< HEAD
 	List<Material> listamat = (List<Material>)request.getAttribute("lista");
 
 	for(Material m : listamat){
+=======
+List<Material> listamat = (List<Material>)request.getAttribute("lista");
+
+for(Material m : listamat){
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 
 %>
 
@@ -50,5 +63,9 @@
 
 
 	</table>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

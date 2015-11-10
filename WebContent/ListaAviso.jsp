@@ -6,11 +6,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<<<<<<< HEAD
 <title>Lista aviso</title>
 </head>
 <body>
 
 
+=======
+<title>Lista de aviso</title>
+</head>
+<body>
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
@@ -18,9 +25,15 @@
 		</tr>
 <%
 
+<<<<<<< HEAD
 	List<Aviso> listav = (List<Aviso>)request.getAttribute("lista");
 
 	for(Aviso a : listav){
+=======
+List<Aviso> listav = (List<Aviso>)request.getAttribute("lista");
+
+for(Aviso a : listav){
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 
 %>
 
@@ -51,5 +64,9 @@
 
 
 	</table>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

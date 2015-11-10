@@ -12,6 +12,10 @@ import br.com.infox.entidades.Aviso;
 public class AvisoDAO {
 
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 private Connection con = Conexao.getConnection();
 	
 	
@@ -161,4 +165,9 @@ private Connection con = Conexao.getConnection();
 		return avilista;
 		 
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 }

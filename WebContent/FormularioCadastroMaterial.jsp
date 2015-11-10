@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@page import="br.com.infox.entidades.Material"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -5,11 +6,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+=======
+<!DOCTYPE html>
+<%@page import="br.com.infox.entidades.Material"%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <title>CADASTRAR MATERIAL</title>
 </head>
 <body>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <%
 	Material material = (Material)request.getAttribute("material");
 
@@ -33,5 +44,10 @@
 	
 	
 </form>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

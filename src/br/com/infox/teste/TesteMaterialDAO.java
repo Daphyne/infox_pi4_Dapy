@@ -7,7 +7,10 @@ import br.com.infox.jdbc.MaterialDAO;
 
 public class TesteMaterialDAO {
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -21,8 +24,11 @@ public class TesteMaterialDAO {
 	}
 
 	private static void cadastro() {
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 		Material mat = new Material();
 		
 		MaterialDAO matdao = new MaterialDAO();
@@ -95,4 +101,8 @@ public class TesteMaterialDAO {
 
 		
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@page import="br.com.infox.entidades.Disciplina"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -5,11 +6,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+=======
+<!DOCTYPE html>
+<%@page import="br.com.infox.entidades.Disciplina"%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <title>CADASTRO DE DISCIPLINA</title>
 </head>
 <body>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <%
 	Disciplina dis = (Disciplina)request.getAttribute("disciplina");
 
@@ -35,5 +46,10 @@
 	
 	
 </form>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

@@ -10,8 +10,13 @@ import java.util.List;
 import br.com.infox.entidades.Professor;
 
 public class ProfessorDAO {
+<<<<<<< HEAD
 
 private Connection con = Conexao.getConnection();
+=======
+	
+	private Connection con = Conexao.getConnection();
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 	
 	
 	public void Cadastrar(Professor professor){

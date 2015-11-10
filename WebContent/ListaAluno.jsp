@@ -6,11 +6,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<<<<<<< HEAD
 <title>Lista aluno</title>
 </head>
 <body>
 
 
+=======
+<title>Listar aluno</title>
+</head>
+<body>
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <table border="1">
 		
 		<tr bgcolor="#1E90FF">
@@ -18,9 +25,15 @@
 		</tr>
 <%
 
+<<<<<<< HEAD
 	List<Aluno> listaalu = (List<Aluno>)request.getAttribute("lista");
 
 	for(Aluno a : listaalu){
+=======
+List<Aluno> listaalu = (List<Aluno>)request.getAttribute("lista");
+
+for(Aluno a : listaalu){
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 
 %>
 
@@ -53,5 +66,9 @@
 
 
 	</table>
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

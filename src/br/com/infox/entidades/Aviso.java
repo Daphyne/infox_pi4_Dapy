@@ -1,7 +1,11 @@
 package br.com.infox.entidades;
 
 public class Aviso {
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 	private String nomeAviso;
 	private int idAviso;
 	private String horaPublicacao;
@@ -40,4 +44,10 @@ public class Aviso {
 	public void setIdDisciplina(int idDisciplina) {
 		this.idDisciplina = idDisciplina;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 }

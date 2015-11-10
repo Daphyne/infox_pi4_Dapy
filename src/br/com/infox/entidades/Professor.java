@@ -50,4 +50,9 @@ public class Professor {
 	public void setEmailProfessor(String emailProfessor) {
 		this.emailProfessor = emailProfessor;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 }

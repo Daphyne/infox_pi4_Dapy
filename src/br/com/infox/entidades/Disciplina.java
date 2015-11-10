@@ -1,8 +1,12 @@
 package br.com.infox.entidades;
 
 public class Disciplina {
+<<<<<<< HEAD
 
 
+=======
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 	private int idDisciplina;
 	private String nomeDisciplina;
 	private int matriculaProfessor;
@@ -43,4 +47,8 @@ public class Disciplina {
 		this.emailProfessor = emailProfessor;
 	}
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 }

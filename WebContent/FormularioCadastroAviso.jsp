@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@page import="br.com.infox.entidades.Aviso"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -10,6 +11,17 @@
 <body>
 
 
+=======
+<!DOCTYPE html>
+<%@page import="br.com.infox.entidades.Aviso"%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CADASTRO DO AVISO</title>
+</head>
+<body>
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 <%
 	Aviso aviso = (Aviso)request.getAttribute("aviso");
 
@@ -36,5 +48,9 @@
 	
 	
 </form>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

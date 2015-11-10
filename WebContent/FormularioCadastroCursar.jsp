@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@page import="br.com.infox.entidades.Cursar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -6,6 +7,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>CADASTRO CURSAR</title>
+=======
+<!DOCTYPE html>
+<%@page import="br.com.infox.entidades.Cursar"%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CADASTRO DO CURSAR</title>
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </head>
 <body>
 
@@ -34,5 +43,10 @@
 	
 	
 </form>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 </body>
 </html>

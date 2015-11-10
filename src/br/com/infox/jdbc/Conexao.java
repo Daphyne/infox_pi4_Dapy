@@ -5,8 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
+<<<<<<< HEAD
 
 public static Connection getConnection(){
+=======
+	
+	
+	
+	public static Connection getConnection(){
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 		
 		Connection con = null;
 
@@ -28,5 +35,8 @@ public static Connection getConnection(){
 		
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 }

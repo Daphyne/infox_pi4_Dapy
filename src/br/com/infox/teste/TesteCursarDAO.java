@@ -18,8 +18,11 @@ public class TesteCursarDAO {
 	}
 
 	private static void cadastro() {
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 		Cursar cur = new Cursar();
 		
 		CursarDAO curdao = new CursarDAO();
@@ -35,7 +38,10 @@ public class TesteCursarDAO {
 	
 	
 	private static void alterar(){
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 		Scanner ler = new Scanner(System.in);
 
 		
@@ -93,4 +99,8 @@ public class TesteCursarDAO {
 
 		
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
 }

@@ -1,0 +1,288 @@
+@CHARSET "ISO-8859-1";
+
+body{
+  background-color: #FFFFFF;
+  margin:0px;
+  font-family: "cooper black", "algerian", "forte","arial black";
+}
+h1{
+  background-color: #1E90FF; 
+  text-align: center;
+  padding: 10px;
+  color:#000000;
+}
+ 
+footer{
+  background-color: #9AFF9A; 
+  height:100px;
+  margin-bottom: 30px;
+  color:#000000;
+}
+#tudo{
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+header{
+  background-color:#9AFF9A; 
+  height:139px;
+  color:#fff;
+}
+nav{
+  background-color:  #9AFF9A;
+  height: 60px;
+  line-height:60px;
+  display: block;
+  color:#fff;
+ }
+ nav ul{
+  margin: 0 auto;
+  padding: 0px;
+  width: 700px;
+}
+nav ul li{
+  list-style: none;
+  float:left;
+}
+nav ul li a{
+  color: #000000;
+  text-transform:uppercase;
+  text-decoration: none;
+  display: block;
+  padding:0 40px;
+  font-weight: bold;
+  transition: background-color 1s;
+}
+#conteudo{
+  background-color: #FFFFFF; 
+  margin:0px;
+}
+#conteudo figure{
+  margin:0 0 10px 0;
+}
+body {
+  text-align: center;
+}
+
+#galeria {
+  width: 800px;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #FF66CC;
+}
+
+
+#ampliacao {
+  width: 800px;
+  height: 800px;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+h2{
+ 
+  text-decoration: underline;
+  text-align: center;
+  color: MediumVioletRed;
+}
+h3{
+  
+  text-decoration: underline;
+}
+section h3:nth-child(4){
+  color: MediumVioletRed;
+  text-align: center;
+  
+  
+}
+section h3:nth-child(6){
+  color: MediumVioletRed;
+  text-align: center;
+  
+  
+}
+#pespecial{
+
+  text-align: left;
+}
+aside{
+  width:50px;
+  height:50px;
+  float-left:left;
+  margin-left: 10px;
+  
+  
+}
+aside img.profile{
+  
+  width:  300px;
+  height: 500px;
+  float: left;
+  margin: 0 20px 10px 0;
+  
+  
+}
+aside figure figcaption{
+  
+ font-size: 10px;
+  text-align: center;
+  
+ }nav ul li a:hover, a.active{
+  background-color: #3CB371;
+  color: #000;
+}figure span{
+  background-color:#FF66CC;
+  padding:30px;
+  position: absolute;
+  display: inline;
+  float:left;
+  width: 50px;
+  height: 50px;
+
+}
+figure:hover span{
+  display:block;
+}
+figure{
+  width: 960px;
+}
+figure img{
+  float: center;
+  width: 315px;
+  height: 500px;
+
+}
+#produtos figure{
+
+  width:  960px;
+}
+#produtos figure img{
+
+ float: center;
+  width: 315px;
+  height: 500px;
+ 
+
+}
+#produtos hr{
+ border-bottom: 3px solid #000;
+
+}
+#conteudo form input{
+
+  width: 280px;
+
+}
+#conteudo form input#ddd{
+
+  width: 40px;
+  
+}
+#conteudo form input#telefone{
+
+  width: 220px;
+  
+}
+#conteudo form input#enviar{
+
+  width: auto;
+  
+}
+#conteudo form textarea#mensagem{
+
+  width: 400px;
+  height: 160px;
+  
+}
+#grande{
+
+  float: center;
+  width: 400px;
+  height: 700px;
+}
+#ampliacao img {
+  width: 90%;
+  height: auto;
+}
+
+#galeria nav {
+  margin-top: 1em;
+}
+
+#galeria nav img {
+  text-align: center;
+  width: 80px;
+  height: auto;
+}
+form#contato label, textarea {
+	display: block;
+	
+}
+form#contato {
+	width:400px;
+}
+form#contato input{
+	width:250px;
+}
+form#contato input#ddd{
+	width:30px;
+}
+form#contato input#telefone{
+	width:210px;
+}
+form#contao input#enviar{
+	width:auto;
+}
+form#contato textarea{
+	width:px;
+	height:140px;
+}
+form#contato #ddd-telefone{
+	width:254px;
+}
+form#contato div.um{
+	float:left;
+}
+form#contato div.dois{
+	float:rigth;
+}
+form#contato label{
+	margin-top:10px;
+}
+form#contato select{
+	margin-bottom:25px;
+}
+form#contato input#enviar{
+	margin-top:10px;
+}
+div.um, div.dois{
+	margin-bottom:10px;
+}
+form#contato{
+	width: 450px;
+	margin-top:30px;
+}
+form#contato fieldset{
+	padding: 10px 25px;
+	border:none;
+	border-top:1px, solid #ccc;
+	border-left:1px, solid #ccc;
+}
+form#contato legend{
+	padding:1px 10px;
+	border:1px solid #ccc;
+}
+form#contato label span{
+	color:#c30;
+}
+form#contato legend{
+	color:#f60;
+}
+form#contato input, form#contato select, form#contato textarea{
+	border:1px solid #999;
+}
+dt{
+	color:#f60;
+	font-weight:bold;
+	font-size:14px;
+	margin-bottom:5px;
+}

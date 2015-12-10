@@ -11,8 +11,15 @@ import br.com.infox.entidades.Aluno;
 
 public class AlunoDAO {
 
+<<<<<<< HEAD
 
 	
+=======
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 private Connection con = Conexao.getConnection();
 	
 	
@@ -56,12 +63,17 @@ private Connection con = Conexao.getConnection();
 	
 	public void Alterar(Aluno aluno){
 		
+<<<<<<< HEAD
 		String sql = "UPDATE aluno SET telefoneAluno=? , emailAluno=? , dataNacAluno=? , nomeAluno=? , endereco=? , senha=? WHERE matriculaAluno=?";
+=======
+		String sql = "UPDATE aluno SET matriculaAluno=? , telefoneAluno=? , emailAluno=? , dataNacAluno=? , nomeAluno=? , endereco=? , senha=? WHERE matriculaAluno=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 		try {
 			
 			
 			PreparedStatement preparador = con.prepareStatement(sql);
+<<<<<<< HEAD
 			
 			preparador.setString(1, aluno.getTelefoneAluno());
 			preparador.setString(2, aluno.getEmailAluno());
@@ -70,6 +82,15 @@ private Connection con = Conexao.getConnection();
 			preparador.setString(5, aluno.getEndereco());
 			preparador.setString(6, aluno.getSenha());
 			preparador.setInt(7, aluno.getMatriculaAluno());
+=======
+			preparador.setInt(1, aluno.getMatriculaAluno());
+			preparador.setString(2, aluno.getTelefoneAluno());
+			preparador.setString(3, aluno.getEmailAluno());
+			preparador.setString(4, aluno.getDataNacAluno());
+			preparador.setString(5, aluno.getNomeAluno());
+			preparador.setString(6, aluno.getEndereco());
+			preparador.setString(7, aluno.getSenha());
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			
@@ -124,9 +145,16 @@ private Connection con = Conexao.getConnection();
 }
 	
 	
+<<<<<<< HEAD
 	public List<Aluno> BuscarTodosAlunos (){
 		
 		String sql = "SELECT * FROM aluno";
+=======
+	
+	public List<Aluno> BuscarMatriculaAluno(int matriculaAluno){
+		
+		String sql = "SELECT * FROM aluno WHERE matriculaAluno=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		List<Aluno> alulista = new ArrayList<Aluno>();
 
 		
@@ -134,6 +162,12 @@ private Connection con = Conexao.getConnection();
 			
 			
 			PreparedStatement preparador = con.prepareStatement(sql);
+<<<<<<< HEAD
+=======
+			preparador.setInt(1, matriculaAluno);
+			
+			
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			ResultSet resul = preparador.executeQuery();
 			
 			while(resul.next()){
@@ -155,7 +189,10 @@ private Connection con = Conexao.getConnection();
 			
 			
 			}
+<<<<<<< HEAD
 			preparador.close();
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 		} catch (SQLException e) {
 			// TODO: handle exception
@@ -167,6 +204,7 @@ private Connection con = Conexao.getConnection();
 		return alulista;
 
 }
+<<<<<<< HEAD
 	
 	public Aluno BuscarMatriculaAluno(int matriculaAluno){
 		
@@ -280,3 +318,6 @@ private Connection con = Conexao.getConnection();
 }
 }
 
+=======
+}
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315

@@ -10,8 +10,17 @@ import java.util.List;
 import br.com.infox.entidades.Material;
 
 public class MaterialDAO {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+=======
+	
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 private Connection con = Conexao.getConnection();
 	
 	
@@ -50,7 +59,11 @@ private Connection con = Conexao.getConnection();
 	
 	public void Alterar(Material material){
 		
+<<<<<<< HEAD
 		String sql = "UPDATE material SET caminho=?, nomeMaterial=?, idDisciplin=? WHERE idMaterial=?";
+=======
+		String sql = "UPDATE material SET caminho=?, nomeMaterial=?, idMaterial=?, idDisciplin=? WHERE idMaterial=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 		try {
 			
@@ -58,8 +71,14 @@ private Connection con = Conexao.getConnection();
 			PreparedStatement preparador = con.prepareStatement(sql);
 			preparador.setString(1, material.getCaminho());
 			preparador.setString(2, material.getNomeMaterial());
+<<<<<<< HEAD
 			preparador.setInt(3, material.getIdDisciplina());
 			preparador.setInt(4, material.getIdMaterial());
+=======
+			preparador.setInt(3, material.getIdMaterial());
+			preparador.setInt(4, material.getIdDisciplina());
+			
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			
@@ -111,11 +130,18 @@ private Connection con = Conexao.getConnection();
 
 }
 	
+<<<<<<< HEAD
 
 
 	public List<Material> BuscarTodos(){
 		
 		String sql = "SELECT * FROM material";
+=======
+	
+	public List<Material> BuscarIdMaterial(int idMaterial){
+		
+		String sql = "SELECT * FROM material WHERE idMaterial=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		List<Material> materlista = new ArrayList<Material>();
 
 		
@@ -123,6 +149,10 @@ private Connection con = Conexao.getConnection();
 			
 			
 			PreparedStatement preparador = con.prepareStatement(sql);
+<<<<<<< HEAD
+=======
+			preparador.setInt(1, idMaterial);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			ResultSet resul = preparador.executeQuery();
@@ -138,6 +168,7 @@ private Connection con = Conexao.getConnection();
 			mater.setIdDisciplina(resul.getInt("idDisciplin"));
 			
 			materlista.add(mater);
+<<<<<<< HEAD
 		
 			
 			}
@@ -182,6 +213,13 @@ private Connection con = Conexao.getConnection();
 			
 			}
 			preparador.close();
+=======
+			
+			
+			
+			
+			}
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 		} catch (SQLException e) {
 			// TODO: handle exception
@@ -190,9 +228,20 @@ private Connection con = Conexao.getConnection();
 
 			e.printStackTrace();
 		}
+<<<<<<< HEAD
 		return mater;
 		 
 	}
 	
 
+=======
+		return materlista;
+		 
+	}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 }

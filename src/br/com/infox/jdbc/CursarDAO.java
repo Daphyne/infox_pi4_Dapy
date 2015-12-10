@@ -10,8 +10,16 @@ import java.util.List;
 import br.com.infox.entidades.Cursar;
 
 public class CursarDAO {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+=======
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 private Connection con = Conexao.getConnection();
 	
 	
@@ -50,7 +58,11 @@ private Connection con = Conexao.getConnection();
 	
 	public void Alterar(Cursar cursar){
 		
+<<<<<<< HEAD
 		String sql = "UPDATE cursar SET falta=?, nota=?, matriculaAluno=? WHERE idDisciplina=?";
+=======
+		String sql = "UPDATE cursar SET falta=?, nota=?, matriculaAluno=?, idDisciplina=? WHERE idDisciplina=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 		try {
 			
@@ -85,13 +97,21 @@ private Connection con = Conexao.getConnection();
 	
 	public void Excluir(Cursar cursar){
 		
+<<<<<<< HEAD
 		String sql = "DELETE FROM cursar WHERE matriculaAluno=?";
+=======
+		String sql = "DELETE FROM cursar WHERE idDisciplina=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 		try {
 			
 			
 			PreparedStatement preparador = con.prepareStatement(sql);
+<<<<<<< HEAD
 			preparador.setInt(1, cursar.getMatriculaAluno());
+=======
+			preparador.setInt(1, cursar.getIdDisciplina());
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			
@@ -115,10 +135,17 @@ private Connection con = Conexao.getConnection();
 	
 	
 	
+<<<<<<< HEAD
 
 	public List<Cursar> BuscarTodos(){
 		
 		String sql = "SELECT * FROM cursar";
+=======
+	
+	public List<Cursar> BuscarMatriculaAluno(int matriculaAluno){
+		
+		String sql = "SELECT * FROM cursar WHERE matriculaAluno=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		List<Cursar> curlista = new ArrayList<Cursar>();
 
 		
@@ -126,6 +153,10 @@ private Connection con = Conexao.getConnection();
 			
 			
 			PreparedStatement preparador = con.prepareStatement(sql);
+<<<<<<< HEAD
+=======
+			preparador.setInt(1, matriculaAluno);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			ResultSet resul = preparador.executeQuery();
@@ -134,10 +165,17 @@ private Connection con = Conexao.getConnection();
 				
 			Cursar cur = new Cursar();
 			
+<<<<<<< HEAD
 			cur.setFalta(resul.getString("falta"));
 			cur.setNota(resul.getString("nota"));
 			cur.setMatriculaAluno(resul.getInt("matriculaAluno"));
 			cur.setIdDisciplina(resul.getInt("idDisciplina"));
+=======
+			cur.setMatriculaAluno(resul.getInt("matriculaAluno"));
+			cur.setIdDisciplina(resul.getInt("idDisciplina"));
+			cur.setNota(resul.getString("nota"));
+			cur.setFalta(resul.getString("falta"));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			curlista.add(cur);
 			
@@ -145,7 +183,10 @@ private Connection con = Conexao.getConnection();
 			
 			
 			}
+<<<<<<< HEAD
 			preparador.close();
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 		} catch (SQLException e) {
 			// TODO: handle exception
@@ -157,6 +198,7 @@ private Connection con = Conexao.getConnection();
 		return curlista;
 		 
 	}
+<<<<<<< HEAD
 	
 	public Cursar BuscarMatriculaAluno(int matriculaAluno){
 		
@@ -198,4 +240,10 @@ private Connection con = Conexao.getConnection();
 		return cur;
 		 
 	}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 }

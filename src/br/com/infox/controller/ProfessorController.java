@@ -4,6 +4,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +30,10 @@ import br.com.infox.jdbc.ProfessorDAO;
 @WebServlet("/professorcontroller.do")
 public class ProfessorController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -29,8 +42,11 @@ public class ProfessorController extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -39,6 +55,12 @@ public class ProfessorController extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 
+<<<<<<< HEAD
+=======
+		
+		int matriculaProfessor = Integer.parseInt(request.getParameter("txtmprof"));
+
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 		String acao = request.getParameter("acao");
 		
@@ -49,27 +71,43 @@ public class ProfessorController extends HttpServlet {
 		if(acao!=null && acao.equals("exc")){
 			
 
+<<<<<<< HEAD
 			String matriculaprofessor = request.getParameter("id");
 			
+=======
+			String matriculaprofessor = request.getParameter("matriculaProfessor");
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			Professor prof = new Professor();
 			prof.setMatriculaProfessor(Integer.parseInt(matriculaprofessor));
 			profdao.Excluir(prof);
 			
+<<<<<<< HEAD
 			//Redirecionar para o cliente(browser) a lista com o registro já excluído
 			response.sendRedirect("professorcontroller.do?acao=lis");
 			
+=======
+
+			//Redirecionar para o cliente(browser) a lista com o registro já excluído
+			response.sendRedirect("professorcontroller.do?acao=lis");
+				
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		}
 		
 		
 		if(acao!=null && acao.equals("alt")){
 			
 
+<<<<<<< HEAD
 			String mprof = request.getParameter("matriculaProfessor");
 			
 			Professor prof = new Professor();
 			prof=profdao.BuscarMatricula(Integer.parseInt(mprof));
 			profdao.Alterar(prof);
+=======
+			String matriculaprofessor = request.getParameter("matriculaProfessor");
+			Professor prof = (Professor) profdao.BuscarMatricula(Integer.parseInt(matriculaprofessor));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			request.setAttribute("professor", prof);
 			
 			//Encaminha para a tela
@@ -102,8 +140,13 @@ public class ProfessorController extends HttpServlet {
 		
 
 		if(acao!=null && acao.equals("lis") ){
+<<<<<<< HEAD
 			
 			List<Professor> lista = profdao.BuscarTodos();
+=======
+				
+			List<Professor> lista = profdao.BuscarMatricula(matriculaProfessor);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			request.setAttribute("lista", lista); 
 			
 			RequestDispatcher saida = request.getRequestDispatcher("ListaProfessor.jsp");
@@ -111,8 +154,11 @@ public class ProfessorController extends HttpServlet {
 			
 		}
 		
+<<<<<<< HEAD
 
 		
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		//Com servlets
 		//String htmlsaida = "<html> <body> <table border='1'>"+
 		//"<tr><td>Matricula do professor</td><td>Data de nascimneto</td><td>Telefone</td><td>Nome</td><td>Senha</td><td>Email</td></tr>";
@@ -128,8 +174,12 @@ public class ProfessorController extends HttpServlet {
 		
 		//PrintWriter saida = response.getWriter();
 		//saida.println(htmlsaida);
+<<<<<<< HEAD
 		
 		
+=======
+
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	}
 
 	/**
@@ -163,12 +213,15 @@ public class ProfessorController extends HttpServlet {
 		saida.print("Cadastrado!");
 		
 		
+<<<<<<< HEAD
 		
 		
 		
 		
 		
 		
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	}
 
 }

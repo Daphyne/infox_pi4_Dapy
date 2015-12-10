@@ -10,8 +10,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 import br.com.infox.entidades.Aviso;
 import br.com.infox.jdbc.AvisoDAO;
@@ -38,18 +41,29 @@ public class AvisoController extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 
+<<<<<<< HEAD
+=======
+		int idaviso = Integer.parseInt(request.getParameter("txtmidav"));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 
 		String acao = request.getParameter("acao");
 		
 		AvisoDAO avidao = new AvisoDAO();
+<<<<<<< HEAD
 		int parametro=0;
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 
 		if(acao!=null && acao.equals("exc")){
 			
 
+<<<<<<< HEAD
 			String idAviso = request.getParameter("id");
+=======
+			String idAviso = request.getParameter("idAviso");
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			Aviso av = new Aviso();
 			
@@ -58,8 +72,15 @@ public class AvisoController extends HttpServlet {
 			avidao.Excluir(av);
 			
 
+<<<<<<< HEAD
 			//Redirecionar para o cliente(browser) a lista com o registro já excluído
 			response.sendRedirect("avisocontroller.do?acao=lis");
+=======
+
+			//Redirecionar para o cliente(browser) a lista com o registro já excluído
+			response.sendRedirect("avisocontroller.do?acao=lis");
+				
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			
@@ -72,9 +93,13 @@ public class AvisoController extends HttpServlet {
 
 			String idAviso = request.getParameter("idAviso");
 			
+<<<<<<< HEAD
 			Aviso av = new Aviso();
 			avidao.BuscarIdAviso(Integer.parseInt(idAviso));
 			avidao.Alterar(av);
+=======
+			Aviso av = (Aviso) avidao.BuscarIdAviso(Integer.parseInt(idAviso));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			request.setAttribute("aviso", av);
@@ -112,6 +137,7 @@ public class AvisoController extends HttpServlet {
 			
 		}
 
+<<<<<<< HEAD
 		if(acao!=null  && acao.equals("lis")){
 			
 			List<Aviso> lista = avidao.BuscarTodos();
@@ -142,6 +168,11 @@ public class AvisoController extends HttpServlet {
 			String mat =  JOptionPane.showInputDialog("Confirme id do aviso:");
 			 int maa = Integer.parseInt(mat);
 			Aviso lista = avidao.BuscarIdAviso(maa);
+=======
+		if(acao!=null && acao.equals("lis")){
+			
+			List<Aviso> lista = avidao.BuscarIdAviso(idaviso);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			request.setAttribute("lista", lista);
 			
@@ -157,7 +188,11 @@ public class AvisoController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 		String nomeAviso = request.getParameter("txtnomeaviso");
 		int idAviso = Integer.parseInt(request.getParameter("txtidaviso"));
@@ -179,6 +214,10 @@ public class AvisoController extends HttpServlet {
 		PrintWriter saida = response.getWriter();
 		saida.print("Cadastrado!");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	}
 
 }

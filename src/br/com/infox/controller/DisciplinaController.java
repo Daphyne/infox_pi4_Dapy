@@ -34,8 +34,17 @@ public class DisciplinaController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 
 
+=======
+		
+		
+
+		
+
+		int iddisciplina = Integer.parseInt(request.getParameter("txtiddisci"));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 
 		String acao = request.getParameter("acao");
@@ -45,7 +54,11 @@ public class DisciplinaController extends HttpServlet {
 
 		if(acao!=null && acao.equals("exc")){
 			
+<<<<<<< HEAD
 			String idDisciplina = request.getParameter("id");
+=======
+			String idDisciplina = request.getParameter("idDisciplina");
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			Disciplina dis = new Disciplina();
 			
@@ -64,10 +77,14 @@ public class DisciplinaController extends HttpServlet {
 			
 			String idDisciplina = request.getParameter("idDisciplina");
 			
+<<<<<<< HEAD
 			Disciplina dis = new Disciplina();
 			dis = disdao.BuscarIdDisciplina(Integer.parseInt(idDisciplina));
 			disdao.Alterar(dis);
 			
+=======
+			Disciplina dis = (Disciplina) disdao.BuscarIdDisciplina(Integer.parseInt(idDisciplina));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			request.setAttribute("disciplina", dis);
 			
@@ -97,17 +114,27 @@ public class DisciplinaController extends HttpServlet {
 		
 		
 
+<<<<<<< HEAD
 		if(acao!=null && acao.equals("lis")){
 			
 
 				List<Disciplina> lista =disdao.BuscarTodos();
+=======
+		if(acao!=null  && acao.equals("lis")){
+			
+				List<Disciplina> lista =disdao.BuscarIdDisciplina(iddisciplina);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 				request.setAttribute("lista", lista);
 				
 				RequestDispatcher saida = request.getRequestDispatcher("ListaDisciplina.jsp");
 				saida.forward(request, response);
 				
 			}
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	}
 
 	/**
@@ -115,6 +142,10 @@ public class DisciplinaController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		int idDisciplina = Integer.parseInt(request.getParameter("txtiddisciplina"));
 		String nomeDisciplina = request.getParameter("txtnomedisciplina");
 		int matriculaProfessor = Integer.parseInt(request.getParameter("txtmatriculaprofessor"));

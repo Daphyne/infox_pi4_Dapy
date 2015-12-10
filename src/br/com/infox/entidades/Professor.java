@@ -2,7 +2,11 @@ package br.com.infox.entidades;
 
 public class Professor {
 
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	private int matriculaProfessor;
 	private String dataNascProfessor;
 	private String telefoneProfessor;
@@ -50,5 +54,14 @@ public class Professor {
 	public void setEmailProfessor(String emailProfessor) {
 		this.emailProfessor = emailProfessor;
 	}
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+}
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315

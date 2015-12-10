@@ -11,7 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 import br.com.infox.entidades.Aluno;
 import br.com.infox.jdbc.AlunoDAO;
 
@@ -35,11 +38,19 @@ public class AlunoController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 
 
 
 		String acao = request.getParameter("acao");
 		
+=======
+		
+
+		int mal = Integer.parseInt(request.getParameter("txtmalu"));
+
+		String acao = request.getParameter("acao");
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 		AlunoDAO alunodao = new AlunoDAO();	
 		
@@ -47,7 +58,11 @@ public class AlunoController extends HttpServlet {
 		if(acao!=null && acao.equals("exc")){
 			
 			
+<<<<<<< HEAD
 			String matriculaAluno = request.getParameter("id");
+=======
+			String matriculaAluno = request.getParameter("matriculaAluno");
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			Aluno aluno = new Aluno();
 			
@@ -66,9 +81,14 @@ public class AlunoController extends HttpServlet {
 			
 			String matriculaAluno = request.getParameter("matriculaAluno");
 			
+<<<<<<< HEAD
 			Aluno aluno = new Aluno();
 			aluno = alunodao.BuscarMatriculaAluno(Integer.parseInt(matriculaAluno));
 			alunodao.Alterar(aluno);
+=======
+			Aluno aluno = (Aluno) alunodao.BuscarMatriculaAluno(Integer.parseInt(matriculaAluno));
+			
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 			request.setAttribute("aluno", aluno);
 			
@@ -102,12 +122,20 @@ public class AlunoController extends HttpServlet {
 			
 		}
 
+<<<<<<< HEAD
 		
 		if(acao!=null && acao.equals("lis")){
 			
 
 			
 			List<Aluno> lista = alunodao.BuscarTodosAlunos();
+=======
+
+		if(acao!=null && acao.equals("lis")){
+			
+			
+			List<Aluno> lista = alunodao.BuscarMatriculaAluno(mal);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			request.setAttribute("lista", lista);
 			
@@ -116,6 +144,11 @@ public class AlunoController extends HttpServlet {
 			
 			
 		}
+<<<<<<< HEAD
+=======
+		
+		
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	}
 
 	/**

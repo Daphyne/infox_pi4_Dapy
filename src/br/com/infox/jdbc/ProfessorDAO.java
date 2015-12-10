@@ -10,9 +10,19 @@ import java.util.List;
 import br.com.infox.entidades.Professor;
 
 public class ProfessorDAO {
+<<<<<<< HEAD
 
 
 	private Connection con = Conexao.getConnection();
+=======
+<<<<<<< HEAD
+
+private Connection con = Conexao.getConnection();
+=======
+	
+	private Connection con = Conexao.getConnection();
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	
 	
 	public void Cadastrar(Professor professor){
@@ -51,18 +61,31 @@ public class ProfessorDAO {
 	
 	public void Alterar(Professor professor){
 		
+<<<<<<< HEAD
 		String sql = "UPDATE professor SET dataNascProfessor=?, telefoneProfessor=?, nomeProfessor=?, senha=?, emailProfessor=? WHERE matriculaProfessor=?";
+=======
+		String sql = "UPDATE professor SET matriculaProfessor=?, dataNascProfessor=?, telefoneProfessor=?, nomeProfessor=?, senha=?, emailProfessor=? WHERE matriculaProfessor=?";
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 		try {
 			
 			
 			PreparedStatement preparador = con.prepareStatement(sql);
+<<<<<<< HEAD
 			preparador.setString(1, professor.getDataNascProfessor());
 			preparador.setString(2, professor.getTelefoneProfessor());
 			preparador.setString(3, professor.getNomeProfessor());
 			preparador.setString(4, professor.getSenha());
 			preparador.setString(5, professor.getEmailProfessor());
 			preparador.setInt(6, professor.getMatriculaProfessor());
+=======
+			preparador.setInt(1, professor.getMatriculaProfessor());
+			preparador.setString(2, professor.getDataNascProfessor());
+			preparador.setString(3, professor.getTelefoneProfessor());
+			preparador.setString(4, professor.getNomeProfessor());
+			preparador.setString(5, professor.getSenha());
+			preparador.setString(7, professor.getEmailProfessor());
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			
 			preparador.execute();
@@ -111,6 +134,7 @@ public class ProfessorDAO {
 		 
 	}
 	
+<<<<<<< HEAD
 
 	
 	public List<Professor>BuscarTodos(){
@@ -159,6 +183,13 @@ public class ProfessorDAO {
 		String sql = "SELECT * FROM professor WHERE matriculaProfessor=?";
 		
 		Professor pro = null;
+=======
+	
+	public List<Professor> BuscarMatricula(int matriculaProfessor){
+		
+		String sql = "SELECT * FROM professor WHERE matriculaProfessor=?";
+		List<Professor> prolista = new ArrayList<Professor>();
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 		
 		try {
@@ -170,9 +201,16 @@ public class ProfessorDAO {
 			
 			ResultSet resul = preparador.executeQuery();
 			
+<<<<<<< HEAD
 			if(resul.next()){
 				
 				pro = new Professor();
+=======
+			while(resul.next()){
+				
+			Professor pro = new Professor();
+			
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			pro.setMatriculaProfessor(resul.getInt("matriculaProfessor"));
 			pro.setDataNascProfessor(resul.getString("dataNascProfessor"));
@@ -181,6 +219,7 @@ public class ProfessorDAO {
 			pro.setSenha(resul.getString("senha"));
 			pro.setEmailProfessor(resul.getString("emailProfessor"));
 			
+<<<<<<< HEAD
 			
 			}
 			preparador.close();
@@ -264,4 +303,24 @@ public class ProfessorDAO {
 	
 	
 	
+=======
+			prolista.add(pro);
+			
+			
+			
+			
+			}
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+
+			System.out.println("Não foi possível consultar no sistema.");
+
+			e.printStackTrace();
+		}
+		return prolista;
+		 
+	}
+
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 }

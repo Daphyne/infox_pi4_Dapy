@@ -10,8 +10,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 import br.com.infox.entidades.Cursar;
 import br.com.infox.jdbc.CursarDAO;
@@ -38,17 +41,28 @@ public class CursarController extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 
+<<<<<<< HEAD
+=======
+		int macursar = Integer.parseInt(request.getParameter("txtmalucursar"));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 
 		String acao = request.getParameter("acao");
 		
 		CursarDAO curdao = new CursarDAO();
+<<<<<<< HEAD
 		int parametro = 0;
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 
 		if(acao!=null && acao.equals("exc")){
 			
 
+<<<<<<< HEAD
 			String matriculaAluno = request.getParameter("id");
+=======
+			String matriculaAluno = request.getParameter("matriculaAluno");
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			Cursar cursar = new Cursar();
 			
@@ -57,14 +71,22 @@ public class CursarController extends HttpServlet {
 			curdao.Excluir(cursar);
 			
 
+<<<<<<< HEAD
 			//Redirecionar para o cliente(browser) a lista com o registro já excluído
 			response.sendRedirect("cursarcontroller.do?acao=lis");
 			
+=======
+
+			//Redirecionar para o cliente(browser) a lista com o registro já excluído
+			response.sendRedirect("cursarcontroller.do?acao=lis");
+				
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 		}
 		
 		if(acao!=null && acao.equals("alt")){
 			
+<<<<<<< HEAD
 			String matriculaAluno = request.getParameter("matriculaAluno");
 
 			Cursar cursar = new Cursar();
@@ -74,6 +96,12 @@ public class CursarController extends HttpServlet {
 			curdao.Alterar(cursar);
 			
 			
+=======
+
+			String matriculaAluno = request.getParameter("matriculaAluno");
+			
+			Cursar cursar = (Cursar) curdao.BuscarMatriculaAluno(Integer.parseInt(matriculaAluno));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 
 			request.setAttribute("cursar", cursar);
@@ -105,10 +133,15 @@ public class CursarController extends HttpServlet {
 			
 		}
 
+<<<<<<< HEAD
 		if(acao!=null  && acao.equals("lis")){
 			
 
 			List<Cursar> lista = curdao.BuscarTodos();
+=======
+		if(acao!=null && acao.equals("lis")){
+			List<Cursar> lista = curdao.BuscarMatriculaAluno(macursar);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			request.setAttribute("lista", lista);
 			
@@ -116,6 +149,7 @@ public class CursarController extends HttpServlet {
 			saida.forward(request, response);
 			
 		}
+<<<<<<< HEAD
 		if(acao!=null  && acao.equals("lis")&& parametro==1){
 			
 			
@@ -147,6 +181,8 @@ public class CursarController extends HttpServlet {
 			
 		}
 
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	}
 
 	/**
@@ -154,7 +190,11 @@ public class CursarController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		String falta = request.getParameter("txtfaltacursar");
 		String nota = request.getParameter("txtnotacursar"); 
 		int matriculaAluno = Integer.parseInt(request.getParameter("txtmaluno"));

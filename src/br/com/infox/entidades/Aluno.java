@@ -1,8 +1,18 @@
 package br.com.infox.entidades;
 
 public class Aluno {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+=======
+	
+	
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	private int matriculaAluno;
 	private String telefoneAluno;
 	private String emailAluno;
@@ -55,5 +65,16 @@ public class Aluno {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+<<<<<<< HEAD
 }
 
+=======
+	
+	
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 690cb9829f1cafbfc5850e578f4bd2d50b1fc298
+}
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315

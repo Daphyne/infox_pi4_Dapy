@@ -36,6 +36,10 @@ public class MaterialController extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 
+<<<<<<< HEAD
+=======
+		int idmaterial = Integer.parseInt(request.getParameter("txtmidmater"));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 		
 
 		String acao = request.getParameter("acao");
@@ -47,7 +51,11 @@ public class MaterialController extends HttpServlet {
 		if(acao!=null && acao.equals("exc")){
 
 
+<<<<<<< HEAD
 			String idMaterial = request.getParameter("id");
+=======
+			String idMaterial = request.getParameter("idMaterial");
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			Material mater = new Material();
 			
@@ -56,8 +64,15 @@ public class MaterialController extends HttpServlet {
 			matdao.Excluir(mater);
 			
 
+<<<<<<< HEAD
 			//Redirecionar para o cliente(browser) a lista com o registro já excluído
 			response.sendRedirect("materialcontroller.do?acao=lis");
+=======
+
+			//Redirecionar para o cliente(browser) a lista com o registro já excluído
+			response.sendRedirect("materialcontroller.do?acao=lis");
+				
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 
 			
@@ -68,10 +83,14 @@ public class MaterialController extends HttpServlet {
 
 			String idMaterial = request.getParameter("idMaterial");
 			
+<<<<<<< HEAD
 			Material mater = new Material();
 			mater = matdao.BuscarIdMaterial(Integer.parseInt(idMaterial));
 			matdao.Alterar(mater);
 			
+=======
+			Material mater = (Material) matdao.BuscarIdMaterial(Integer.parseInt(idMaterial));
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			request.setAttribute("material", mater);
 			
@@ -106,7 +125,11 @@ public class MaterialController extends HttpServlet {
 		}
 
 		if(acao!=null && acao.equals("lis")){
+<<<<<<< HEAD
 			List<Material> lista = matdao.BuscarTodos();
+=======
+			List<Material> lista = matdao.BuscarIdMaterial(idmaterial);
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 			
 			request.setAttribute("lista", lista);
 			
@@ -114,8 +137,11 @@ public class MaterialController extends HttpServlet {
 			saida.forward(request, response);
 			
 		}
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> 06bf4517ac507a8f128966235204ad40b0dc7315
 	}
 
 	/**
